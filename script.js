@@ -19,7 +19,7 @@ $(document).keypress(function (event) {
         stLevel(stGame);
     }
 });
-$(".start").on("click touchstart", function (e) {
+$(".start").on("click touchend", function (e) {
     $(".start").addClass("pressed")
     stLevel(stGame);
     e.preventDefault();
