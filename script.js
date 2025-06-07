@@ -20,8 +20,12 @@ $(document).keypress(function (event) {
     }
 });
 $(".start").on("click touchstart", function (e) {
+    $(".start").addClass("pressed")
     stLevel(stGame);
     e.preventDefault();
+    setTimeout(function(){
+        $(".start").removeClass("pressed")
+    },200)
 });
 function clickColor(track) {
     $("." + track).addClass("ani");
@@ -65,7 +69,7 @@ function forCheck(index) {
             acceptingInput = false;
             setTimeout(() => {
                 stGame();
-            }, 1000);
+            }, 500);
         }
     } else {
         $(".start").hide();
