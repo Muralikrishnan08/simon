@@ -69,7 +69,7 @@ function forCheck(index) {
             acceptingInput = false;
             setTimeout(() => {
                 stGame();
-            }, 500);
+            }, 700);
         }
     } else {
         $(".start").hide();
