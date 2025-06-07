@@ -22,7 +22,9 @@ $(document).keypress(function (event) {
 $(".start").on("click touchend", function (e) {
     $(".start").addClass("pressed")
     stLevel(stGame);
-    $(".start").hide();
+    setTimeout(function(){
+         $(".start").hide();
+    },250)
     e.preventDefault();
     setTimeout(function(){
         $(".start").removeClass("pressed")
