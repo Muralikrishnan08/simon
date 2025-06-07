@@ -61,7 +61,7 @@ function forCheck(index) {
     if (comColor[index] === userColor[index]) {
         if (userColor.length === comColor.length) {
             level++;
-            $("h1").html("LEVEL " + level);
+            $(".levels").html("LEVEL " + level);
             acceptingInput = false;
             setTimeout(() => {
                 stGame();
@@ -69,18 +69,17 @@ function forCheck(index) {
         }
     } else {
         $(".start").hide();
-        var wrong = new Audio("audio/wrong.mp3");
-        wrong.play();
-        $(".levels,.red,.green,.blue,.yellow").hide()
+         $(".red,.green,.blue,.yellow").hide()
+        $(".levels").hide()
         $(".endMessage").show()
         var sco=level-1;
-        $(".score").html("YOUR SCORE IS "+sco);
-        $(".score").show()
+        $(".score").html("YOUR SCORE IS "+sco).show()
         $("body").addClass("wBack");
+        var wrong = new Audio("audio/wrong.mp3");
+        wrong.play();
         setTimeout(function () {
             $("body").removeClass("wBack");
         }, 200);
         acceptingInput = false;
-     
     }
 }
