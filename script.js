@@ -22,6 +22,7 @@ $(document).keypress(function (event) {
 $(".start").on("click touchend", function (e) {
     $(".start").addClass("pressed")
     stLevel(stGame);
+    $(".start").hide();
     e.preventDefault();
     setTimeout(function(){
         $(".start").removeClass("pressed")
@@ -72,7 +73,6 @@ function forCheck(index) {
             }, 700);
         }
     } else {
-        $(".start").hide();
          $(".red,.green,.blue,.yellow").hide()
         $(".levels").hide()
         $(".endMessage").show()
